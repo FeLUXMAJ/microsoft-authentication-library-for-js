@@ -1,7 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
 import {RouterModule} from '@angular/router';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component'
@@ -34,7 +33,6 @@ protectedResourceMap.set("https://graph.microsoft.com/v1.0/me", ["user.read"]);
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),  // RouterModule.forRoot(appRoutes,{useHash:true}) for hashbang url
     MsalModule.forRoot({

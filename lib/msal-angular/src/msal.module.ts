@@ -15,14 +15,14 @@ export class WindowWrapper extends Window {
     declarations: [
 
     ],
-  providers: [MsalGuard, BroadcastService],
+  providers: [MsalGuard, BroadcastService, MsalService],
 })
 export class MsalModule {
    static forRoot(config: MsalConfig ): ModuleWithProviders {
     return {
       ngModule: MsalModule,
       providers: [
-          {provide: MSAL_CONFIG, useValue: config} ,   MsalService ,{provide :WindowWrapper, useValue: window}
+          {provide: MSAL_CONFIG, useValue: config}  ,{provide :WindowWrapper, useValue: window}
       ]
     }
   }
